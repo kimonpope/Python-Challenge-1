@@ -123,8 +123,8 @@ Compute the amount of money taken in from that sale – for example, if the line
 of that sale of two coats is 130.50. Use the loop to find the grand total of the amount of money taken in over all
 the sales in the file and to display the sales data as a formatted table. Display the grand total below the table, as
 in:
+  
 Item Price #sold Amount
-http://www.nationalacademies.org/hmd/~/media/Files/Activity%20Files/Disease/ReducingHypertension/Chobanian.pdf
 ----------------------------------------
 coat $ 65.25 2 $130.50
 pants $ 27.25 1 $ 27.25
