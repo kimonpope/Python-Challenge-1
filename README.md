@@ -1,5 +1,5 @@
 # Python-Challenge-1
-This is a Python code I have developed in college. It it diviided into 10 problems:
+This is a Python code (kpope_hw1.py) I have developed in college. It it diviided into 10 problems:
 
 1. Create str variables called product1, product2, and product3; assign them these strings that contain the
 product's name, product price, and number of items sold of this product:
