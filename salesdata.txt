@@ -1,0 +1,10 @@
+coat,65.25,2
+pants,27.25,1
+shirt,12.75,5
+hat,8.00,4
+gloves,7.75,2
+shoes,49.95,6
+leggings,25.25,3
+skirt,19.95,5
+belt,12.05,1
+sweater,14.45,2
