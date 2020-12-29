@@ -1,13 +1,12 @@
 # Python-Scripts
-This is a collection of Python scripts I have developed in college. It it diviided into 4 challemges:
+This is a collection of Python scripts I have developed in college. Please feel free to review or even try these challenges. The source code for each challenge is provided in the "Python Code Challenges" folder. Some challenges require certain text files which are in the "Text Files for Code Challenges" folder. Happy Coding! It is divided into 4 challenges:
 
 
 ## Python Challenge #1 
 
 There are a total of ten problems:
 
-1. Create str variables called product1, product2, and product3; assign them these strings that contain the
-product's name, product price, and number of items sold of this product: <br/>
+1. Create str variables called product1, product2, and product3; assign them these strings that contain the product's name, product price, and number of items sold of this product: <br/>
 <code>'toaster,32.75,2'</code><br/>
 <code>'stock pot,56.25,5'</code><br/>
 <code>'measuring cup,8.95,10'</code><br/><br/>
