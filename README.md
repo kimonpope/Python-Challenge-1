@@ -80,8 +80,7 @@ You have to write Python expressions yourself for these:<br/>
 There are a total of seven problems:
 
 1. Create an empty list variable named ***powers***. Use a for loop over integers from 1 to 10 inclusive; insert into
-powers the integer raised to the same power (11, 22, 33, etc.). Use a second for loop to display a table containing
-the integers and their powers side-by-side, like this (make sure that second column is wide enough):<br/>
+powers the integer raised to the same power (11, 22, 33, etc.). Use a second for loop to display a table containing the integers and their powers side-by-side, like this (make sure that second column is wide enough):<br/>
 <code>Integer Power</code><br/>
 <code>1 1</code><br/>
 <code>2 4</code><br/>
@@ -153,43 +152,40 @@ time. Separate the three pieces of data into variables and change the type of th
 Compute the amount of money taken in from that sale – for example, if the line says 'coat,65.25,2', the amount
 of that sale of two coats is 130.50. Use the loop to find the grand total of the amount of money taken in over all
 the sales in the file and to display the sales data as a formatted table. Display the grand total below the table, as
-in:
+in: <br/><br/>
+<code>Item      Price       #sold       Amount</code><br/>
+<code>----------------------------------------</code><br/>
+<code>coat      $ 65.25         2       $130.50</code><br/>
+<code>pants     $ 27.25         1       $ 27.25</code><br/>
+<code>... and so on ...</code><br/>
+<code>----------------------------------------</code><br/>
+<code>Grand total: $717.30</code><br/><br/>
+Note that the grand total above is just an example; the actual total will be some other value. The formatting does not have to match the table above exactly – get the data to line up in columns. Close the file at the end.
   
-Item Price #sold Amount
-----------------------------------------
-coat $ 65.25 2 $130.50
-pants $ 27.25 1 $ 27.25
-... and so on ...
-----------------------------------------
-Grand total: $717.30
-Note that the grand total above is just an example; the actual total will be some other value. The formatting does
-not have to match the table above exactly – get the data to line up in columns. Close the file at the end.
-  
-5. Download the file 'weather.txt'. It is a CSV file containing weather data for one day in this format: The first
-line contains city, date; the rest of the lines contain time, temperature, humidity, wind. For example, the first
-two lines might be:
-Pittsburgh,3/29/2019
-01:27,35,78,4
-which says that on March 29 in Pittsburgh, at 01:27 (using the 24-hour clock) the temperature was 35, the
-relative humidity was 78, and the wind speed was 4 miles per hour.
-Write code that will process this data in the following way. Open the file (make sure that the data file and the
-your script are in the same directory). Read the city and date using readline(), as in:
-city, date = f.readline().split(',')
-Display the date using the name of the month, not the numeric value (hint: after splitting the city and date, split
-the date; declare a list with the month names in it, and use the month number to access the month name). Then,
-using a for loop, read and display the four values for each weather reading. Close the file. At the end of this
-table, display the average temperature, the average humidity, and the average wind speed, like this:
-Weather data for Pittsburgh
-March 29, 2019
-Time Temperature Humidity Wind
--------------------------------
-01:27 35 78 4
-02:14 36 78 3
-... and so on ...
--------------------------------
-Average temperature: 42.3
-Average humidity: 82.1
-Average wind: 3.2
+5. Download the file 'weather.txt'. It is a CSV file containing weather data for one day in this format: The first line contains city, date; the rest of the lines contain time, temperature, humidity, wind. For example, the first two lines might be:<br/><br/>
+<code>Pittsburgh,3/29/2019</code><br/>
+<code>01:27,35,78,4</code><br/><br/>
+which says that on March 29 in Pittsburgh, at 01:27 (using the 24-hour clock) the temperature was 35, the relative humidity was 78, and the wind speed was 4 miles per hour.</br>
+
+Write code that will process this data in the following way. Open the file (make sure that the data file and the your script are in the same directory). Read the city and date using readline(), as in:<br/>
+
+<code>city, date = f.readline().split(',')</code><br/>
+
+Display the date using the name of the month, not the numeric value (hint: after splitting the city and date, split the date; declare a list with the month names in it, and use the month number to access the month name). Then, using a for loop, read and display the four values for each weather reading. Close the file. At the end of this table, display the average temperature, the average humidity, and the average wind speed, like this:<br/>
+
+<code>Weather data for Pittsburgh</code>
+<code>March 29, 2019</code><br/>
+
+<code>Time Temperature Humidity Wind</code><br/>
+<code>-------------------------------</code><br/>
+<code>01:27 35 78 4</code><br/>
+<code>02:14 36 78 3</code><br/>
+<code>... and so on ...</code><br/>
+<code>-------------------------------</code><br/>
+<code>Average temperature: 42.3</code><br/>
+<code>Average humidity: 82.1</code><br/>
+<code>Average wind: 3.2</code><br/>
+
 The summary data above is made up – the actual values will differ. Report the averages with one decimal place.
 Don't try to code all of this problem at one go – take it in steps. See if you can read the file and print the raw
 data; then see if you can compute and display the average temperature; and so on. You'll also need to convert
@@ -198,30 +194,30 @@ the str data read from the file for temperature, humidity, and wind to type int.
 6. One thing that #5 didn't do, but would likely be of interest, is to display the high and low temperatures. This
 problem will compute those twice, the easy way and the hard way. Open the file, read the first line, and display
 the header and date as in #5. The use a for loop to read the rest of the file and extract the four date items from
-each line. This time, only put the temperature (converted to an int) into a list called temperatures. After the for
+each line. This time, only put the temperature (converted to an int) into a list called ***temperatures***. After the for
 loop, close the file. Then use min(temp) and max(temp) to find the minimum and maximum temperatures;
 display them with a label. That's the easy way – the built-in functions do the work, and that's the way you
 should do it in real programs.
-The hard way is to implement the equivalent of min( ) and max( ) on your own. To do this, set small =
-temperatures[0] and large = temperatures[0]. Then write a for loop that counts over a range from 1 to the
+The hard way is to implement the equivalent of min( ) and max( ) on your own. To do this, set ***small*** =
+temperatures[0] and ***large*** = temperatures[0]. Then write a for loop that counts over a range from 1 to the
 number of values in temperatures; inside the loop, implement this logic: if the temperature at this point in the
 list (that is, at temperatures[i] if i is your loop variable) is less than small, then small has to be reset to equal this
 temperature. The idea is, you initially set small to the first temperature you see. If you later find a smaller
 temperature, then small needs to be reset. Similarly, do the same with large. After the loop, display small and
 large; they should be the same values you found by the easy method.
 
-7. Use the list data below to do the following using list operations as suggested. You may need to look up some
-of these functions. Display data after every operation.
-data = [5, -10, 17, 90, -3, 44, 5, 5, -3, 50, 5, 100]
-(a.) Change 17 to 27 using index( ) to find 17 first.
-(b.) Remove the last element using pop() and display it.
-(c.) Add new item 20 at the end of data using append( ).
-(d.) Increment the first and last items by 10 and 20, respectively.
-(e.) Remove duplicate elements from the list (use set( ) to help do this); make sure the result is a list named
-data.
-(f.) Sort the list using sort( ).
-(g.) Create a new list named subdata containing elements 2 through 6 inclusive of data using a slice. Display
-subdata instead of data.
+7. Use the list ***data*** below to do the following using list operations as suggested. You may need to look up some
+of these functions. Display data after every operation.<br/>
+
+<code>data = [5, -10, 17, 90, -3, 44, 5, 5, -3, 50, 5, 100]</code><br/>
+
+(a.) Change 17 to 27 using index( ) to find 17 first.<br/>
+(b.) Remove the last element using pop() and display it.<br/>
+(c.) Add new item 20 at the end of ***data*** using append( ).<br/>
+(d.) Increment the first and last items by 10 and 20, respectively.<br/>
+(e.) Remove duplicate elements from the list (use set( ) to help do this); make sure the result is a list named ***data***.<br/>
+(f.) Sort the list using sort( ).<br/>
+(g.) Create a new list named ***subdata*** containing elements 2 through 6 inclusive of ***data*** using a slice. Display ***subdata*** instead of ***data***.<br/><br/>
   
   
 ## Python Challenge #3
