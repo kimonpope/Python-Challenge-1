@@ -223,35 +223,29 @@ of these functions. Display data after every operation.<br/>
 
 There are a total of 5 problems:
 
-1. (a.) Create a set named A containing the characters in the string 'Uncle Bob' using a comprehension; display
-A. Create a set named B containing the characters in the string 'Aunt Babs' using a comprehension; display B.
-Then compute and display the following sets using set operations and display them:
-(b.) everything in both A and B
-(c.) only the things common to both A and B
-(d.) the things in B without the things in A
-(e.) the things in A but not in B plus the things in B but not in A
+1. (a.) Create a ***set*** named ***A*** containing the characters in the string 'Uncle Bob' using a comprehension; display A. Create a set named ***B*** containing the characters in the string 'Aunt Babs' using a comprehension; display B. Then compute and display the following sets using set operations and display them:<br/>
+(b.) everything in both A and B<br/>
+(c.) only the things common to both A and B<br/>
+(d.) the things in B without the things in A<br/>
+(e.) the things in A but not in B plus the things in B but not in A<br/>
 
-2. Create two variables student1 and student2 as tuples containing last name, id, and major information:
-Smith,4423,MISM and Jones,2215,Philosophy
-(a.) Write a loop that iterates over student1's fields and prints them on separate lines; do the same for student2 in
-a separate loop.
-(b.) Create a list named studentList and store student1 and student2 in it. Then write a for loop that prints each
-entry of studentList (as tuples, not as in part a).
-(c.) Create a dict called studentDict that uses the student's id as the key and the whole student tuple as the value
-(but don't hardcode the id – extract it from each tuple); do this with a for loop over studentList. Then print
-studentDict (no loop needed). Then print studentDict[2215].
-(d.) Prompt the user to enter a student name (and say to enter 'Done' when finished). If the user enters 'Done' as
-the name, print studentDict. If not, prompt the user to enter the id, then prompt for the major. Convert the id to
-an int, create a new tuple containing the user's new data, and insert the new student into studentDict.
-Hint: the structure of this should be as follows:
-prompt for a name # Do this outside the loop in case user enters 'Done'
-while name != 'Done': # This is actual Python code
-prompt for the id
-… and do the other stuff …
-prompt for another name # Repeat the prompt for name
-print the dictionary
-(e.) Prompt the user for a student id number (don’t forget to convert it to int). If there's a student with that id in
-the dictionary, display that person's record; if not, display the message 'Error, not found'. (Just once, no loop).
+2. Create two variables ***student1*** and ***student2*** as tuples containing last name, id, and major information:<br/>
+Smith,4423,MISM and Jones,2215,Philosophy<br/>
+(a.) Write a loop that iterates over student1's fields and prints them on separate lines; do the same for student2 in a separate loop.<br/>
+(b.) Create a list named studentList and store student1 and student2 in it. Then write a for loop that prints each entry of studentList (as tuples, not as in part a).<br/>
+(c.) Create a dict called studentDict that uses the student's id as the key and the whole student tuple as the value (but don't hardcode the id – extract it from each tuple); do this with a for loop over studentList. Then print studentDict (no loop needed). Then print studentDict[2215].<br/>
+(d.) Prompt the user to enter a student name (and say to enter 'Done' when finished). If the user enters 'Done' as the name, print studentDict. If not, prompt the user to enter the id, then prompt for the major. Convert the id to an int, create a new tuple containing the user's new data, and insert the new student into studentDict.<br/>
+
+Hint: the structure of this should be as follows:<br/>
+
+prompt for a name # Do this outside the loop in case user enters 'Done'<br/>
+while name != 'Done': &emsp; &emsp; # This is actual Python code<br/>
+&emsp; &emsp; prompt for the id<br/>
+&emsp; &emsp; … and do the other stuff …<br/>
+&emsp; &emsp; prompt for another name &emsp; &emsp; # Repeat the prompt for name<br/>
+print the dictionary<br/>
+
+(e.) Prompt the user for a student id number (don’t forget to convert it to int). If there's a student with that id in the dictionary, display that person's record; if not, display the message 'Error, not found'. (Just once, no loop).
 
 3. (a.) Create a list called names containing these strings: 'Moe', 'Larry', and 'Curly'. Use a for loop to display
 its contents on separate lines. The use a for loop to display it on one line (hint: end = ' ').
