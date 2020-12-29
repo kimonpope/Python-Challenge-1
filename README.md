@@ -53,7 +53,7 @@ and display their values (don't worry about rounding):<br/>
 (b.) (y times z) divided by seven – as an int, no remainder<br/>
 (c.) (y times z) divided by seven – but *only* the remainder<br/>
 (d.) the average of x, y, and z<br/>
-(e). 𝑧(#$$%&'(#$∗* )<br/><br/>
+(e). 𝑧((100-x^4)/(sqrt(10y)))<br/><br/>
 Assign these values to these variables: s: 'Vampires', t:'ravage', u:'Pittsburgh', write Python code and display the following using str functions:<br/>
 (f.) The index of the 'a' in s, in t, and in u<br/>
 (g.) s, t, and u concatenated into one string with a space between each, the result named v<br/>
