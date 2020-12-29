@@ -59,7 +59,7 @@ Assign these values to these variables: s: 'Vampires', t:'ravage', u:'Pittsburgh
 (g.) s, t, and u concatenated into one string with a space between each, the result named v<br/>
 (h.) Three s's (using the * operator)<br/>
 (i.) Whether the letter 'z' is in u<br/>
-(j.) The sum of the number of characters in s, t, and u<br/><br/>
+(j.) The sum of the number of characters in s, t, and u
 
 10. Display the values of the following Boolean expressions (using the variables in #9 – no need to re-declare them). (Note: you don't have to write if-statements here; just print the Boolean values by putting the expression in a print( ) statement.)<br/>
 (a.) (x>5) and (x<5)<br/>
@@ -79,16 +79,16 @@ You have to write Python expressions yourself for these:<br/>
 
 There are a total of seven problems:
 
-1. Create an empty list variable named powers. Use a for loop over integers from 1 to 10 inclusive; insert into
+1. Create an empty list variable named ***powers***. Use a for loop over integers from 1 to 10 inclusive; insert into
 powers the integer raised to the same power (11, 22, 33, etc.). Use a second for loop to display a table containing
-the integers and their powers side-by-side, like this (make sure that second column is wide enough):
-Integer Power
-1 1
-2 4
-3 27
-... and so on ...
+the integers and their powers side-by-side, like this (make sure that second column is wide enough):<br/>
+<code>Integer Power</code><br/>
+<code>1 1</code><br/>
+<code>2 4</code><br/>
+<code>3 27</code><br/>
+<code>... and so on ...</code>
 
-2. Create a list named words containing these strings: log, fog, bog, dog, hog, cog, nog, jog. Print the original
+2. Create a list named ***words*** containing these strings: log, fog, bog, dog, hog, cog, nog, jog. Print the original
 list as a column with the header 'Original'. Print the words in sorted order in a column labeled 'Sorted'. Print the
 words (still sorted) in all upper case in a column labeled 'Upper'. Finally, print the words (still sorted) in Title
 case in a column labeled 'Title'.
@@ -96,14 +96,55 @@ case in a column labeled 'Title'.
 3. Prompt the user for his/her systolic blood pressure and diastolic blood pressure; capture both as int variables.
 Next, error check both data item: they should be positive and lower than 400 (somewhat arbitrary, but the
 highest ever recorded were 370 and 360); if either is bad, display the error category. Then classify this person's
-blood pressure by the rules in the chart below displaying the correct category.
-Category Systolic Diastolic
-Error Low less than 0 or less than 0
-Normal less than 120 and less than 80
-Prehypertension 120 to 139 or 80-89
-Stage 1 Hypertension 140-159 or 90-99
-Stage 2 Hypertension 160 or more or 100 or more
-Error High more than 400 or more than 400
+blood pressure by the rules in the chart below displaying the correct category.<br/>
+<table>
+    <thead>
+        <tr>
+            <th colspan="1">Category</th>
+            <th colspan="1">Systolic</th>
+            <th colspan="1"></th>
+            <th colspan="1">Diastolic</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Error Low</td>
+            <td>less than 0</td>
+            <td>or</td>
+            <td>less than 0</td>
+        </tr>
+       <tr>
+            <td>Normal</td>
+            <td>less than 120</td>
+            <td>and</td>
+            <td>less than 80</td>
+        </tr>
+       <tr>
+            <td>Prehypertension</td>
+            <td>120 to 139</td>
+            <td>or</td>
+            <td>80-89</td>
+        </tr> 
+       <tr>
+            <td>Stage 1 Hypertension</td>
+            <td>140-159</td>
+            <td>or</td>
+            <td>90-99</td>
+        </tr>
+        <tr>
+            <td>Stage 2 Hypertension</td>
+            <td>160 or more</td>
+            <td>or</td>
+            <td>100 or more</td>
+        </tr>
+        <tr>
+            <td>Error High</td>
+            <td>more than 400</td>
+            <td>or</td>
+            <td>more than 400</td>
+        </tr>
+    </tbody>
+</table>
 
 4. Download the file 'salesdata.txt' from Canvas (copy it into the directory you're working in). You can look at
 the data in a text editor, but don't change it. The data, in CSV format, contains sales records in the form
