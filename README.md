@@ -238,12 +238,12 @@ Smith,4423,MISM and Jones,2215,Philosophy<br/>
 
 Hint: the structure of this should be as follows:<br/>
 
-prompt for a name # Do this outside the loop in case user enters 'Done'<br/>
-while name != 'Done': &emsp; &emsp; # This is actual Python code<br/>
-&emsp; &emsp; prompt for the id<br/>
-&emsp; &emsp; … and do the other stuff …<br/>
-&emsp; &emsp; prompt for another name &emsp; &emsp; # Repeat the prompt for name<br/>
-print the dictionary<br/>
+<code>prompt for a name # Do this outside the loop in case user enters 'Done'</code><br/>
+<code>while name != 'Done': &emsp; &emsp; # This is actual Python code</code><br/>
+<code>&emsp; &emsp; prompt for the id</code><br/>
+<code>&emsp; &emsp; … and do the other stuff …</code><br/>
+<code>&emsp; &emsp; prompt for another name &emsp; &emsp; # Repeat the prompt for name</code><br/>
+<code>print the dictionary</code><br/>
 
 (e.) Prompt the user for a student id number (don’t forget to convert it to int). If there's a student with that id in the dictionary, display that person's record; if not, display the message 'Error, not found'. (Just once, no loop).
 
