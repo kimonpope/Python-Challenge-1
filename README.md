@@ -247,20 +247,19 @@ Hint: the structure of this should be as follows:<br/>
 
 (e.) Prompt the user for a student id number (don’t forget to convert it to int). If there's a student with that id in the dictionary, display that person's record; if not, display the message 'Error, not found'. (Just once, no loop).
 
-3. (a.) Create a list called names containing these strings: 'Moe', 'Larry', and 'Curly'. Use a for loop to display
-its contents on separate lines. The use a for loop to display it on one line (hint: end = ' ').
-(b.) Use list comprehensions to create three more lists using names as the source. The first one, caps, should
-contain the three names in all capital letters. The second one, lengths, should contain three tuples, where each
-tuple is a name and its length, as in ('Moe', 3) and so on. The third one, upDown, should contain three sublists,
+3. (a.) Create a list called ***names*** containing these strings: 'Moe', 'Larry', and 'Curly'. Use a for loop to display its contents on separate lines. The use a for loop to display it on one line (hint: end = ' ').<br/>
+(b.) Use list comprehensions to create three more lists using names as the source. The first one, ***caps***, should
+contain the three names in all capital letters. The second one, ***lengths***, should contain three tuples, where each
+tuple is a name and its length, as in ('Moe', 3) and so on. The third one, ***upDown***, should contain three sublists,
 where each one contains the name, the name in all capitals, and the name in all lower case, as in ['Moe', 'MOE',
-'moe] and so on. Display all three lists (no loops needed).
-(c.) Display all four lists in one table as shown. You'll have to use a counter loop. Don't worry about spacing.
-0 Moe MOE ('Moe', 3) ['Moe', 'MOE', 'moe']
-1 Larry
-etc.
-(d.) Create a list named allOfIt that contains all of the entries from all four lists, unpacked – that is, it should
+'moe] and so on. Display all three lists (no loops needed).<br/>
+(c.) Display all four lists in one table as shown. You'll have to use a counter loop. Don't worry about spacing.<br/>
+<code>0 Moe MOE ('Moe', 3) ['Moe', 'MOE', 'moe']</code><br/>
+<code>1 Larry</code><br/>
+<code>etc.</code><br/><br/>
+(d.) Create a list named ***allOfIt*** that contains all of the entries from all four lists, unpacked – that is, it should
 concatenate (using +) the entries of names, the entries of caps, list( lengths[0] ), list( lengths[1] ), and so on – all
-the individual parts of the tuples and sublists. Print allOfIt (no for loop needed).
+the individual parts of the tuples and sublists. Print allOfIt (no for loop needed).<br/>
 (e.) Use a set to remove the duplicates from allOfIt, then turn it back into a list, then display its contents in a
 column using a for loop.
 
@@ -268,46 +267,54 @@ column using a for loop.
 (a.) Open the file 'shorty.txt' and display all the lines. Then close the file. Note that short.txt is *not* a CSV file,
 so we won't be splitting the lines in the usual way in the other parts below.
 (b.) Repeat part a, but instead display two substrings from each line: the part of the string up to the first left
-parenthesis (use the variable name word), and the part of the string from the left parenthesis to the end (use the
-variable name definition). For example, here's one line from shorty.txt:
-Keel (n.) Fig.: The whole ship.
-As you read lines from this file, use find( ) to find the left parenthesis of the part-of-speech (that is, don't use
+parenthesis (use the variable name ***word***), and the part of the string from the left parenthesis to the end (use the
+variable name ***definition***). For example, here's one line from shorty.txt:<br/><br/>
+<code>Keel (n.) Fig.: The whole ship.</code><br/>
+Find this '(' to break it into KEEL and the rest: slice the line based on ('s index<br/>
+
+As you read lines from this file, use ***find()*** to find the left parenthesis of the part-of-speech (that is, don't use
 split() ). Recall that line.find(str) returns you the index numb er of where str is inside line (it returns -1 if not
-found, but you'll always find the left parenthesis). Create word as a slice up to that point and use rstrip( ) to
-remove any spaces from the end of word. Create definition as a slice using the rest of the line and display the on
-separate lines with labels. So, for example, for the line above, you'd display:
-Word: Keel
-Definition: (n.) Fig.: The whole ship.
-Don't forget to close the file.
-(c.) Create an empty dict name shortD. Then repeat part a, but instead of displaying word and definition, use
+found, but you'll always find the left parenthesis). Create ***word*** as a ***slice*** up to that point and use rstrip( ) to
+remove any spaces from the end of word. Create ***definition*** as a slice using the rest of the line and display the on
+separate lines with labels. So, for example, for the line above, you'd display: <br/>
+
+<code>Word: Keel</code><br/>
+<code>Definition: (n.) Fig.: The whole ship.</code><br/>
+
+Don't forget to close the file.<br/>
+
+(c.) Create an empty dict name ***shortD***. Then repeat part a, but instead of displaying word and definition, use
 them as <key, value> pairs and add them to short – but first, then use upper( ) before inserting it into short.
 Then display shortD (no loop required).
 
-5. In this problem, you'll create a dict named dictionary from the file 'dictionary.txt'. This file is set up like
+5. In this problem, you'll create a dict named ***dictionary*** from the file 'dictionary.txt'. This file is set up like
 'shorty.txt' but contains many more words. Use part 4c as the model for this – in fact, there shouldn't be much
-different except for the file name. You don't have to display dictionary, but if you do, watch out: it's pretty big.
+different except for the file name. You don't have to display dictionary, but if you do, watch out: it's pretty big.<br/>
+
 Note that there are many duplicate words in this file. For simplicity, we'll just use the last definition of the word
 – that is, just enter word-definition pairs without even considering duplicates. This will overwrite old entries,
-but for this problem, that's okay. For example, for Keel, the definition above is the one of several. The last one
-is:
-Keel (v. i.) To turn up the keel; to show the bottom.
-so that's the one that will display. So in other words, don't worry about duplicates!
-find this ( to break it into KEEL and the rest: slice the line based on ('s index
+but for this problem, that's okay. For example, for Keel, the definition above is the one of several. The last one is:<br/>
+
+<code>Keel (v. i.) To turn up the keel; to show the bottom.</code><br/>
+
+so that's the one that will display. So in other words, don't worry about duplicates!<br/>
+
 Next, prompt the user for a word. If she/he enters 'ALLDONE', quit (change the user's input to all capitals, so it
 works even if the user entered something like 'alldone' or 'AllDone'). Otherwise, look up the capitalized version
 of the word (because that's how you stored the keys in the dictionary). If it's not in the dictionary, display
 '<word> not found', but if it's in the dictionary, display '<word>: <definition>', where <word> is printed in all
 capital letters. Then prompt the user for another word; continue until 'ALLDONE' is entered (hint: use a while
 loop with the same general structure as in #2d). Keep counters of the number of words found and the number
-not found and display these at the end. For example, it might look like this, using the entry KEEL from above
-Enter a word to look up or ALLDONE to quit: keel
-KEEL: (n.) Fig.: The whole ship.
-Enter a word to look up or ALLDONE to quit: xyz
-XYZ not found
-Enter a word to look up or ALLDONE to quit: alldone
-# words found: 1
-# words not found: 1
-  
+not found and display these at the end. For example, it might look like this, using the entry KEEL from above<br/>
+    
+<code>Enter a word to look up or ALLDONE to quit: keel</code><br/>
+<code>KEEL: (n.) Fig.: The whole ship.</code><br/>
+<code>Enter a word to look up or ALLDONE to quit: xyz</code><br/>
+<code>XYZ not found</code><br/>
+<code>Enter a word to look up or ALLDONE to quit: alldone</code><br/>
+
+<code># words found: 1</code><br>
+<code># words not found: 1</code><br/>
   
 ## Python Challenge #4
 
