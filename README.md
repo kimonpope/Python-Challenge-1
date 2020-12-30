@@ -343,57 +343,71 @@ practice to make sure your functions work correctly. See below for the rest of t
 
 Create a function called ***printHeader()*** that displays a header like this:<br/>
 
-<code>*****************************************</code><br/>
-<code>* *</code><br/>
-<code>* \<your name here>'s Dictionary Program *</code><br/>
-<code>* *</code><br/>
-<code>*****************************************</code><br/>
+<code>-------------------------------------------</code><br/>
+<code>| &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; |</code><br/>
+<code>| \<your name here>'s Dictionary Program &ensp; |</code><br/>
+<code>| &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; |</code><br/>
+<code>-------------------------------------------</code><br/>
   
-3. Create a function called openFile( ). Instead of hard-coding the name of the dictionary file, prompt the user
+3. Create a function called ***openFile()***. Instead of hard-coding the name of the dictionary file, prompt the user
 to enter then name of the file. Add a try-except block around the call to open the data file in #1. If an exception
 is thrown, display an error message and exit the program. If the file opens correctly, display a message that
 says, 'File xxx opened', where xxx is the file name. Return the file variable.
 
-4. Add a function called createDictionary(f), where the parameter f is the file variable returned from openFile(),
+4. Add a function called ***createDictionary***(f), where the parameter f is the file variable returned from openFile(),
 which is called in the main program. It should create an empty dict, create the dictionary, then return the dict
 variable. As a start, copy the code from homework 3 that created the dictionary and test it on 'shorty.txt' before
-trying the bigger dictionary file.
+trying the bigger dictionary file.<br/>
+
 Now make the following changes to the old code. In that version, if there were duplicate word entries, we just
-overwrote the old definition with the new one. Here, we'll store all the definitions for each word, and display all
-of them when the user asks for the definition of a word.
-To handle duplicates, instead of storing a single definition as the value part of the dictionary, this version will
-store a list of definitions. Use this logic to create the dictionary: Reading the file and using find( ) to divide the
+overwrote the old definition with the new one. Here, we'll store ***all*** the definitions for each word, and display all
+of them when the user asks for the definition of a word.<br/>
+
+To handle duplicates, instead of storing a single definition as the value part of the dictionary, this version will store a ***list*** of definitions. Use this logic to create the dictionary: Reading the file and using find( ) to divide the
 word from the definition stay the same. If the word is not in the dictionary, add it as a list: dictionary[word] =
 [definition]. Note the use of square brackets around definition here – that makes it a list containing one thing,
 the definition. If the word is in the dictionary, retrieve its value into a variable – and remember, this is now a
-list. Then append the new definition (new because this is a duplicate entry for the word) onto that list. Then set
+list. Then ***append*** the new definition (new because this is a duplicate entry for the word) onto that list. Then set
 that list to be the word's value (i.e., you'll overwrite the old list): the syntax is the same as creating the initial
-list, because you're assigning a new list.
+list, because you're assigning a new list.<br/>
+
 Modify main( ) – you won't need to declare an empty dict variable. Just set dictionary to the return value of
 createDictionary().
 
-5. Create a function called displayDefnintions(word, definition) that handles the logic of displaying the word's
+5. Create a function called ***displayDefnintions(word, definition)*** that handles the logic of displaying the word's
 multiple definitions. It does not return anything, because it's just printing the multiple definitions for the word.
-The first parameter is a single word; the second parameter is the list of definitions for that word.
-Use a for loop to iterate over that list, and print the definitions one at a time, numbered – use a counter variable
-for the numbering. Here's an example display (note that the 'Ener a word …' part is not done in this function):
-Enter a word to look up, ALLDONE to quit: Keel
-Keel :
-1: (v. t. & i.) To cool; to skim or stir.
-2: (n.) A brewer's cooling vat; a keelfat.
-3: (n.) A longitudinal timber, or series of timbers scarfed together, extending from stem
-to stern along the bottom of a vessel. It is the principal timber of the vessel, and, by
-means of the ribs attached on each side, supports the vessel's frame. In an iron vessel,
-a combination of plates supplies the place of the keel of a wooden ship. See Illust. of
-Keelson.
-4: (n.) Fig.: The whole ship.
-5: (n.) A barge or lighter, used on the Type for carrying coal from Newcastle; also, a
-barge load of coal, twenty-one tons, four cwt.
-6: (n.) The two lowest petals of the corolla of a papilionaceous flower, united and
-inclosing the stamens and pistil; a carina. See Carina.
-7: (n.) A projecting ridge along the middle of a flat or curved surface.
-8: (v. i.) To traverse with a keel; to navigate.
-9: (v. i.) To turn up the keel; to show the bottom.
+The first parameter is a single word; the second parameter is the list of definitions for that word.<br/>
+
+Use a ***for loop*** to iterate over that list, and print the definitions one at a time, numbered – use a counter variable
+for the numbering. Here's an example display (note that the 'Ener a word …' part is not done in this function):<br/>
+
+<code>Enter a word to look up, ALLDONE to quit: Keel</code><br/>
+
+<code>Keel :</code><br/>
+<code>1: (v. t. & i.) To cool; to skim or stir.</code><br/>
+
+<code>2: (n.) A brewer's cooling vat; a keelfat.</code><br/>
+
+<code>3: (n.) A longitudinal timber, or series of timbers scarfed together, extending from stem</code><br/>
+<code>to stern along the bottom of a vessel. It is the principal timber of the vessel, and, by</code><br/>
+<code>means of the ribs attached on each side, supports the vessel's frame. In an iron vessel,</code><br/>
+<code>a combination of plates supplies the place of the keel of a wooden ship. See Illust. of</code><br/>
+<code>Keelson.</code><br/>
+
+<code>4: (n.) Fig.: The whole ship.</code><br/>
+
+<code>5: (n.) A barge or lighter, used on the Type for carrying coal from Newcastle; also, a</code><br/>
+<code>barge load of coal, twenty-one tons, four cwt.</code><br/>
+
+<code>6: (n.) The two lowest petals of the corolla of a papilionaceous flower, united and</code><br/>
+<code>inclosing the stamens and pistil; a carina. See Carina.</code><br/>
+
+<code>7: (n.) A projecting ridge along the middle of a flat or curved surface.</code><br/>
+
+<code>8: (v. i.) To traverse with a keel; to navigate.</code><br/>
+
+<code>9: (v. i.) To turn up the keel; to show the bottom.</code><br/><br/>
+
 You'll call this function from main( ), inside the loop that does the user prompting. To show all of the
 definitions for a word that the user enters, retrieve the word's list of definitions into a list variable (as before,
 look up the upper case version of the word, and display an error message if the word is not in the dictionary)
@@ -405,15 +419,17 @@ an error message if the word is not in the dictionary, or call displayDefinition
 prompt for the next word; continue until the user enters 'alldone' in some form. You'll also do the counters for
 #words found and #words not found and display those results. Finally, call createHistogram( ), described next.
 
-7. Create a function called createHistogram(dictionary) that iterates over the dictionary's keyset (yes, the
+7. Create a function called ***createHistogram(dictionary)*** that iterates over the dictionary's keyset (yes, the
 keyset) to create a list containing histogram data for the number of definitions that the words have, based on
 these four categories: # of words with exactly one definition; # of words with 2-5 definitions; # of words with 6-
-10 definitions; and # of words with more than 10 definitions. In addition, keep track of the word that has the
-most definitions. Display the results as a table, like this:
-Definition Counts
-1 2-5 6-10 > 10
-86282 22019 2435 894
-Most definitions: <some word>, 72 definitions
+10 definitions; and # of words with more than 10 definitions. In addition, keep track of the word that has the most definitions. Display the results as a table, like this:<br/>
+
+<code>Definition Counts</code><br/>
+<code>1 &emsp; &emsp; &emsp; 2-5 &emsp; &emsp; 6-10 &emsp; > 10</code><br/>
+<code>86282 &emsp; 22019 &emsp; 2435 &emsp; 894</code><br/>
+
+</code>Most definitions: \<some word>, 72 definitions</code><br/>
+
   
 ## Python Challenge #5.1
 
