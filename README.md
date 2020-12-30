@@ -315,23 +315,27 @@ not found and display these at the end. For example, it might look like this, us
 
 <code># words found: 1</code><br>
 <code># words not found: 1</code><br/>
+
   
 ## Python Challenge #4
 
 There are a total of 7 problems:
 
 1. Put comments in front of each function with a brief description of the function's parameters and their types,
-the function's purpose, and the return value (or n/a, if there isn't one), something like this:
-# myfunction(x3b)
-# Parameters: x3b - list
-# Creates a dictionary from the key,value pairs in x3b.
-# Returns: d - dict
+the function's purpose, and the return value (or n/a, if there isn't one), something like this:<br/>
+
+<code># myfunction(x3b)</code><br/>
+<code># Parameters: x3b - list</code><br/>
+<code># Creates a dictionary from the key,value pairs in x3b.</code><br/>
+<code># Returns: d - dict</code><br/>
 
 2. In this problem, you'll re-do Python Challenge 3, Problem 5: create a dictionary of words and their meanings from a
 CSV file. Put your code from that problem into a main( ) program; add the standard two lines to make sure
-main() runs:
-if __name__ == '__main__':
-main()
+main() runs:<br/>
+
+<code>if \_\_name\_\_ == '\_\_main\_\_':</code><br/>
+<code>&emsp; &emsp; main()<br/></code>
+
 Make sure your program runs from the command line (in a terminal or cmd window in the directory where both
 this code and dictionary.txt reside, type python hw4.py) As you code the other problems below, where you'll be
 writing functions, you should test them by calling them from main( ). This won't be graded, but it's good
