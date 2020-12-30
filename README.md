@@ -339,13 +339,15 @@ main() runs:<br/>
 Make sure your program runs from the command line (in a terminal or cmd window in the directory where both
 this code and dictionary.txt reside, type python hw4.py) As you code the other problems below, where you'll be
 writing functions, you should test them by calling them from main( ). This won't be graded, but it's good
-practice to make sure your functions work correctly. See below for the rest of the story on main( ).
-Create a function called printHeader( ) that displays a header like this:
-*****************************************
-* *
-* <your name here>'s Dictionary Program *
-* *
-*****************************************
+practice to make sure your functions work correctly. See below for the rest of the story on main( ).<br/>
+
+Create a function called ***printHeader()*** that displays a header like this:<br/>
+
+<code>*****************************************</code><br/>
+<code>* *</code><br/>
+<code>* \<your name here>'s Dictionary Program *</code><br/>
+<code>* *</code><br/>
+<code>*****************************************</code><br/>
   
 3. Create a function called openFile( ). Instead of hard-coding the name of the dictionary file, prompt the user
 to enter then name of the file. Add a try-except block around the call to open the data file in #1. If an exception
