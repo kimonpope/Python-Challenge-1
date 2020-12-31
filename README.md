@@ -476,7 +476,9 @@ Barnes,Joann,checking,1000.00
 4. Write a function called ***display(accounts)*** that displays the accounts in a formatted table, as shown below.
 The Rating column categorizes the account based on this rule: balances at least 10000 are Excellent; balances
 below 0 are Bad; any other balance is Good. Flag any Bad accounts with the symbol '<<<', as shown. After the
-table, display the number of Bad accounts.
+table, display the number of Bad accounts.<br/>
+
+![image](https://github.com/Python-Script-Challenges/Images/Accounts-Formatted-Table-Example.png)
 
 5. Finally, create a main( ) function that glues this all together: main should open a file with the file name
 'accounts.txt' using a try-except block – display an error message and exit the program if the file does not exist;
