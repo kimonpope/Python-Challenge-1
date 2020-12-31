@@ -436,40 +436,44 @@ these four categories: # of words with exactly one definition; # of words with 2
 Put comments in front of each function with a brief description of the function's parameters and their types, the
 function's purpose, and the return value (or n/a, if there isn't one), something like this:
 
-# myfunction(x3b)
-# Parameters: x3b - list
-# Creates a dictionary from the key,value pairs in x3b.
-# Returns: d - dict
+<code># myfunction(x3b)</code><br/>
+<code># Parameters: x3b - list</code><br/>
+<code># Creates a dictionary from the key,value pairs in x3b.</code><br/>
+<code># Returns: d - dict</code><br/>
 
-Download the file 'accounts.txt' to use with this problem.
+Download the file 'accounts.txt' to use with this problem.<br/>
 
-There are a total of 5 problems for the first part of this challenge:
+There are a total of 5 problems for the first part of this challenge:<br/>
 
-1. Write a function called readAccounts(f). The parameter f is an open bank account text file. It should read
-account records, which have the format
-lastName firstName type-of-account balance
-i.e. it is space delimited (you can look at 'accounts.txt' to see sample records). Create a list containing the data
-for one account. Create a list called accounts, initially empty; this will be a list of lists (i.e. it contains the
+1. Write a function called ***readAccounts(f)***. The parameter f is an open bank account text file. It should read
+account records, which have the format<br/>
+
+<code>lastName firstName type-of-account balance</code><br/>
+
+i.e. it is space delimited (you can look at 'accounts.txt' to see sample records). Create a ***list*** containing the data
+for one account. Create a ***list*** called ***accounts***, initially empty; this will be a list of lists (i.e. it contains the
 account records). As you read each line, do the error check described in #2, checkBalance, on the data. If it
-passes the test, add it to accounts; if it fails the test, skip it.
-If the record is okay, change the fourth field to a float and add it to accounts – that is, each person's data is in a
-list, and all these lists are inside accounts. So, accounts will look something like this:
-[ ['Barrett', 'Martin', 'checking', -1000.00],
-['French', 'Yolanda', 'mortgage', 190000.00],
-…
-['Adams', 'Martin', 'ira', 42000.00] ]
+passes the test, add it to accounts; if it fails the test, skip it.<br/>
+
+If the record is okay, change the fourth field to a float and add it to accounts – that is, each person's data is in a list, and all these lists are inside accounts. So, accounts will look something like this:<br/>
+
+<code>[ ['Barrett', 'Martin', 'checking', -1000.00],</code><br/>
+<code> ['French', 'Yolanda', 'mortgage', 190000.00],</code><br/>
+<code> …</code><br/>
+<code> ['Adams', 'Martin', 'ira', 42000.00] ]</code><br/>
+
 Display the number of accounts skipped because checkBalance returned False. Then function readAccounts( )
 should return the list accounts.
 
 2. If the record's type-of-account is 'checking', any amount is okay, but no negative balances are allowed for the
-other account types. Put this logic in a function named checkBalance(record), where record is a list. The
+other account types. Put this logic in a function named ***checkBalance(record)***, where record is a list. The
 function returns True if the record is okay and False if there's an error.
 
-3. Write a function called writeFile(accounts) whose parameter is the list of accounts. It should create a CSV
+3. Write a function called ***writeFile(accounts)*** whose parameter is the list of accounts. It should create a CSV
 file named 'output.txt' by writing each account's data on one line; for example, here's a sample line:
 Barnes,Joann,checking,1000.00
 
-4. Write a function called display(accounts) that displays the accounts in a formatted table, as shown below.
+4. Write a function called ***display(accounts)*** that displays the accounts in a formatted table, as shown below.
 The Rating column categorizes the account based on this rule: balances at least 10000 are Excellent; balances
 below 0 are Bad; any other balance is Good. Flag any Bad accounts with the symbol '<<<', as shown. After the
 table, display the number of Bad accounts.
