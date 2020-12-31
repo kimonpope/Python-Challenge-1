@@ -478,33 +478,34 @@ The Rating column categorizes the account based on this rule: balances at least 
 below 0 are Bad; any other balance is Good. Flag any Bad accounts with the symbol '<<<', as shown. After the
 table, display the number of Bad accounts.<br/>
 
-![image](https://github.com/kimonpope/Python-Script-Challenges/Images/Accounts-Formatted-Table-Example.png)
+![image](https://github.com/kimonpope/Python-Script-Challenges/blob/main/Images/Accounts-Formatted-Table-Example.png)<br/>
 
-5. Finally, create a main( ) function that glues this all together: main should open a file with the file name
+5. Finally, create a ***main()*** function that glues this all together: main should open a file with the file name
 'accounts.txt' using a try-except block – display an error message and exit the program if the file does not exist;
 then call readAccounts() – that function calls the data checking function to ensure good data - then close the
 input file. Next, sort the data on the last name, then call displayAccounts() to display the data. Finally call
-writeFile(). Add the Python standard code to make your program run:
-if __name__ == '__main__':
-main()
+writeFile(). Add the Python standard code to make your program run:<br/>
+
+<code>if \_\_name\_\_ == '\_\_main\_\_':</code><br/>
+<code>main()</code><br/>
 
 
 ## Python Challenge #5.2
 
 The following application can be modeled using matrices and vectors – you'll need to use numpy and matrix
-multiplication to solve this. (Adapted from Applied Linear Algebra, 2nd Edition, Noble and Daniel) This is
-an example of a Markov Chain process.
+multiplication to solve this. (Adapted from **Applied Linear Algebra, 2nd Edition**, Noble and Daniel) This is
+an example of a ***Markov Chain*** process.<br/>
 
 Three coffee shops – Alice's, Bob's, and Carrie's – operate in a small town. Initially, they split the customers in
 town with Alice's taking 20%, Bob's taking 30%, and Carrie's with 50%. Each month, some of the customers
 from one shop change to one of the other two. For simplicity, we'll assume that the changes are the same each
 month: Alice's retains 80% of its customers and gains 20% of Bob's and 10% of Carrie's. Bob's retains 70% of
 its customers and gains 10% of Alice's and 30% of Carrie's. Carrie's retains 60% of its customers and gains 10%
-of Alice's and 10% of Bob's.
+of Alice's and 10% of Bob's.<br/>
 
-There are a total of 3 problems:
+There are a total of 3 problems:<br/>
 
-1. Write a 3x3 matrix named M that models the change in customers. Each row contains the change percentages
+1. Write a 3x3 matrix named ***M*** that models the change in customers. Each row contains the change percentages
 described above – row 0 is Alice's, 1 is Bob's, and 2 is Carrie's. Each row's diagonal element is the percentage
 that the shop retains. Write a 3x1 vector named x containing the original percentages. Display each of these.
 The values of each column of M, and the values of x, should add to 1. Verify this by displaying them with
@@ -512,10 +513,14 @@ labels.
 
 2. Multiplication of M times x yields the new split of customers for the next month – that is, a new value of x.
 Provide a monthly report of the percentages of customers over two years, partially shown below, by computing
-new values of x for each month. What conclusion can you draw about the results?
+new values of x for each month. What conclusion can you draw about the results?<br/>
+
+![image](https://github.com/kimonpope/Python-Script-Challenges/blob/main/Images/Matrix-Example.png)<br/>
 
 3. Instead of computing new values of x on each step, the calculation can be done by calculating an ongoing
 matrix M on each step. This will keep track of the percentage of customers moving from Bob's and Carrie's to
 Alice's in the first row, and so on. Compute and display these values: M, M2, M3, for two years (no need to
 compute the value of x – we did that in problem 2). A partial display is shown below. What conclusion can you
-draw about the results?
+draw about the results?<br/>
+
+![image](https://github.com/kimonpope/Python-Script-Challenges/blob/main/Images/Matrix-Example-2.png)
